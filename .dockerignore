@@ -1,5 +1,0 @@
-../.idea
-**/*.env
-../.github
-../venv
-**/*__pycache__
