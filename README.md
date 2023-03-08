@@ -2,7 +2,7 @@
 _ToDoList_ _Project_ — планировщик задач, позволяющий работать с целями и отслеживать прогресс их достижения.
 
 Функционал:
-* Вход/регистрация/аутентификация через вк.
+* Вход/регистрация/аутентификация через VK.
 * Создание целей.
 * Выбор:
     * временного интервала цели с отображением количества дней до завершения цели;
@@ -21,4 +21,12 @@ _ToDoList_ _Project_ — планировщик задач, позволяющи
 * Выгрузка целей в CSV/JSON.
 * Заметки к целям.
 
-python 3.11, Django 4.1.7
+---
+
+*Built with:*
+
+[<img src="https://img.shields.io/badge/python-3.10%20%7C%203.11-blue?style=for-the-badge&logo=Python">](https://www.python.org/)
+[<img src="https://img.shields.io/badge/Django-4.1.17-blue?style=for-the-badge&logo=Django">](https://docs.djangoproject.com/en/4.1/)
+[<img src="https://img.shields.io/badge/PostgreSQL-grey?style=for-the-badge&logo=PostgreSQL">](https://www.postgresql.org/)
+[<img src="https://img.shields.io/badge/Docker-grey?style=for-the-badge&logo=Docker">](https://docs.docker.com/)
+---
