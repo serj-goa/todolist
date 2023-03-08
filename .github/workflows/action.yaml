@@ -21,14 +21,14 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-#      - name: Build and push
-#        uses: docker/build-push-action@v4
-#        with:
-#          context: .
-#          push: true
-#          tags: ${{ steps.meta.outputs.tags }}
-#          labels: ${{ steps.meta.outputs.labels }}
-      - name: docker build
-        run: docker/docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/todolist:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
-      - name: docker push
-        run: docker/docker push ${{ secrets.DOCKERHUB_USERNAME }}/todolist:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+      - name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          context: ./docker
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+#      - name: docker build
+#        run: docker/docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/todolist:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+#      - name: docker push
+#        run: docker/docker push ${{ secrets.DOCKERHUB_USERNAME }}/todolist:$GITHUB_REF_NAME-$GITHUB_RUN_ID
