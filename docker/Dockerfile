@@ -23,7 +23,7 @@ RUN groupadd --system service && useradd --system -g service api
 #RUN poetry config virtualenvs.create false \
 #    && poetry install --no-dev --no-ansi --no-root
 
-#COPY todolist/ /opt/todolist
+COPY todolist/ /opt/todolist
 #COPY docker/entrypoint.sh ./entrypoint.sh
 #COPY docker/entrypoint.sh /opt/todolist
 
