@@ -30,6 +30,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    volumes:
+      - /var/www/todolist/static:/opt/static
 
   frontend:
     image: sermalenk/skypro-front:lesson-34
