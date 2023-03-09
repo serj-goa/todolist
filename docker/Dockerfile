@@ -31,8 +31,6 @@ USER api
 
 ENTRYPOINT ["bash", "../build_todolist/entrypoint.sh"]
 
-RUN python manage.py collectstatic
-
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 EXPOSE 8000

@@ -2,6 +2,7 @@ version: "3.9"
 
 volumes:
   pg_data_todolist:
+  django_static:
 
 
 services:
@@ -30,8 +31,15 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+
+  collect_static:
+    image: ${DOCKERHUB_USERNAME}/todolist:latest
+    env_file:
+      - ./.env
+    entrypoint: ''
     volumes:
-      - /var/www/todolist/static:/opt/static
+      - django_static:/opt/static/
+    command: python3 manage.py collectstatic -c --no-input
 
   frontend:
     image: sermalenk/skypro-front:lesson-34
@@ -42,3 +50,4 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - django_static:/usr/share/nginx/html/static/
