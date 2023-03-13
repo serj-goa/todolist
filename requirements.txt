@@ -2,3 +2,5 @@ Django==4.1.7
 python-dotenv==0.21.1
 psycopg2-binary==2.9.5
 ansible-vault-win==1.0.0
+djangorestframework==3.14.0
+social-auth-app-django==5.0.0
