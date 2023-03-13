@@ -24,3 +24,6 @@ run-api-bash:
 
 down:
 	cd docker/ && docker-compose --env-file ../.env down
+
+down rmi-local-v:
+	cd docker/ && docker-compose --env-file ../.env down --rmi local -v
