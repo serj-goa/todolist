@@ -23,13 +23,13 @@ class CreateUserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ('id', 'username', 'first_name', 'last_name', 'email', 'password', 'password_repeat')
 
-    def validate(self, attrs: dict):
+    def validate(self, attrs: dict) -> dict:
         if attrs['password'] != attrs['password_repeat']:
             raise ValidationError('Passwords must match')
 
         return attrs
 
-    def create(self, validated_data: dict):
+    def create(self, validated_data: dict) -> CustomUser:
         del validated_data['password_repeat']
         validated_data['password'] = make_password(validated_data['password'])
         
@@ -44,10 +44,10 @@ class LoginSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ('username', 'password')
 
-    def create(self, validated_data: dict):
+    def create(self, validated_data: dict) -> CustomUser:
         if not (user := authenticate(
             username=validated_data['username'],
-            password=validated_data['password']
+            password=validated_data['password'],
         )):
             raise AuthenticationFailed
         return user
