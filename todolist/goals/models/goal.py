@@ -1,27 +1,7 @@
 from django.db import models
 
 from core.models import CustomUser
-
-
-class BaseModel(models.Model):
-    created = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True)
-    updated = models.DateTimeField(verbose_name='Дата последнего обновления', auto_now=True)
-
-    class Meta:
-        abstract = True
-
-
-class GoalCategory(BaseModel):
-    class Meta:
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
-        
-    title = models.CharField(verbose_name='Название', max_length=255)
-    user = models.ForeignKey(CustomUser, verbose_name='Автор', on_delete=models.PROTECT)
-    is_deleted = models.BooleanField(verbose_name='Удалена', default=False)
-
-    def __str__(self):
-        return self.title
+from goals.models import BaseModel
 
 
 class Goal(BaseModel):
@@ -44,7 +24,7 @@ class Goal(BaseModel):
     title = models.CharField(verbose_name='Название', max_length=255)
     description = models.TextField(verbose_name='Описание', null=True, blank=True)
     category = models.ForeignKey(
-        to=GoalCategory,
+        to='GoalCategory',
         verbose_name='Категория',
         on_delete=models.CASCADE,
         related_name='goals'
@@ -61,6 +41,19 @@ class Goal(BaseModel):
     )
     due_date = models.DateTimeField(verbose_name='Дата выполнения', null=True, blank=True)
     user = models.ForeignKey(CustomUser, on_delete=models.PROTECT, verbose_name='Автор', related_name='goals')
+
+    def __str__(self):
+        return self.title
+
+
+class GoalCategory(BaseModel):
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
+    title = models.CharField(verbose_name='Название', max_length=255)
+    user = models.ForeignKey(CustomUser, verbose_name='Автор', on_delete=models.PROTECT)
+    is_deleted = models.BooleanField(verbose_name='Удалена', default=False)
 
     def __str__(self):
         return self.title
