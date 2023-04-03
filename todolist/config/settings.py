@@ -167,3 +167,5 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'DEFAULT_FILTER_BACKEND': ('django_filters.rest_framework.DjangoFilterBackend', ),
 }
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
