@@ -1,20 +1,6 @@
 <p align="center">
-      <img src="https://github.com/serj-goa/todolist_project/blob/main/logo.png" alt="Project Logo" width="200">
-
-[//]: # (<img src="https://www.seekpng.com/png/detail/1012-10120478_the-to-do-list-graphic-design.png" )
-[//]: # (alt="The To Do List - Graphic Design@seekpng.com" width="726">)
+      <img src="https://github.com/serj-goa/todolist_project/blob/main/images/logo.png" alt="Project Logo" width="200">
 </p>
-
-[//]: # (<kbd>)
-
-[//]: # (    <img src="https://github.com/serj-goa/todolist_project/blob/main/logo.png" alt="Project Logo">)
-
-[//]: # (</kbd>)
-
-[//]: # ()
-[//]: # (![Project logo]&#40;https://github.com/serj-goa/todolist_project/blob/main/logo.png&#41;)
-
-[//]: # (# ToDoList)
 
 <b>_ToDoList_ _Project_</b> — task planner that allows you to work with goals and track progress towards achieving them.
 
