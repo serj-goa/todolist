@@ -14,7 +14,7 @@
 [//]: # ()
 [//]: # (![Project logo]&#40;https://github.com/serj-goa/todolist_project/blob/main/logo.png&#41;)
 
-# ToDoList
+[//]: # (# ToDoList)
 
 <b>_ToDoList_ _Project_</b> — task planner that allows you to work with goals and track progress towards achieving them.
 
