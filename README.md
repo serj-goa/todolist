@@ -1,5 +1,5 @@
 <p align="center">
-      <img src="https://github.com/serj-goa/todolist_project/blob/main/logo.png" alt="Project Logo" width="726">
+      <img src="https://github.com/serj-goa/todolist_project/blob/main/logo.png" alt="Project Logo" width="300">
 
 [//]: # (<img src="https://www.seekpng.com/png/detail/1012-10120478_the-to-do-list-graphic-design.png" )
 [//]: # (alt="The To Do List - Graphic Design@seekpng.com" width="726">)
