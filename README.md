@@ -35,6 +35,8 @@
 * Unloading of targets to CSV/JSON.
 * Notes on goals.
 
+---
+
 ### Local launch:
 
 #### - Running a project with Docker
